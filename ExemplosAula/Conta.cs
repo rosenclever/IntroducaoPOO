@@ -10,12 +10,20 @@ namespace ExemplosAula
     {
         private long _numero;
         private decimal _saldo;
+        private Cliente _titular;
 
         public Conta(long numero, decimal saldo)
         {
             _numero = numero;
             _saldo = saldo;
         }
+
+        // crie um metodo construtor que solicite numero, saldo e titular da conta
+        public Conta(long numero, decimal saldo, Cliente titular) : this(numero, saldo)
+        {
+            _titular = titular;
+        }
+
 
         public long Numero { 
             get => _numero;
@@ -35,5 +43,7 @@ namespace ExemplosAula
         {
             _saldo += valor;
         }
+
+        public Cliente Titular { get => _titular; }
     }
 }
