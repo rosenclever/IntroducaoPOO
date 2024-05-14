@@ -30,5 +30,10 @@ namespace ExemplosAula
         {
             _saldo += valor;
         }
+
+        public void Saque(decimal valor)
+        {
+            _saldo += valor;
+        }
     }
 }
